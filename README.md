@@ -3,7 +3,7 @@
 
 # electron-vue-typescript-boilerplate
 
-[!LICENSE[license-shield-url]][license-url]
+[![LICENSE][license-shield-url]][license-url]
 
 A boilerplate project integrating Electron, Vue and Typescript using Webpack.
 The project can be compiled into a distributable binary and even bundled into an
