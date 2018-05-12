@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="application-name" content="Electron/Typescript/Vue Boilerplate">
+    <meta name="description" content="A project boilerplate">
+    <meta name="author" content="George Thomas">
+    <meta name="publisher" content="Electron">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>electron-vue-typescript-boilerplate</title>
+    <base href="/">
+
+    <% if (htmlWebpackPlugin.options.nodeModules) { %>
+      <!-- Add `node_modules/` to global paths so `require` works properly in development -->
+      <script type="application/javascript">
+        ;(function () {
+          var module = require("module");
+          module.globalPaths.push("<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>");
+        })();
+      </script>
+    <% } %>
+  </head>
+  <body>
+    <main>
+      <div id="app"></div>
+    </main>
+
+    <script type="application/javascript">
+      // Set `__static` path to static files in production
+      if (process.env.NODE_ENV !== "development") {
+        var path = require("path");
+        window.__static = path
+            .join(__dirname, "/static")
+            .replace(/\\/g, "\\\\");
+      }
+    </script>
+  </body>
+</html>

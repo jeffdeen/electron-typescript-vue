@@ -1,9 +1,9 @@
-.idea
-_book
-thumbs.db
 .DS_Store
-node_modules
-tests/builds/*
+thumbs.db
+
+build/
+dist/
+node_modules/
+npm-debug.log.*
 npm-debug.log
-npm-debug.*.log
 !.gitkeep
